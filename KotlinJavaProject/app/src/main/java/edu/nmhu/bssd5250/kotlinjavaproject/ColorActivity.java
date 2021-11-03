@@ -8,9 +8,7 @@ import android.os.Bundle;
 
 public class ColorActivity extends AppCompatActivity {
 
-    public static String COLOR_REQUESTED_01 = "edu.nmhu.bssd5250.kotlinjavaproject.color1";
-    public static String COLOR_REQUESTED_02 = "edu.nmhu.bssd5250.kotlinjavaproject.color2";
-    public static String COLOR_REQUESTED_03 = "edu.nmhu.bssd5250.kotlinjavaproject.color3";
+    public static String COLOR_REQUESTED = "edu.nmhu.bssd5250.kotlinjavaproject.color";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +16,7 @@ public class ColorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_color);
 
         Intent intent = getIntent();
-        int color = Color.parseColor(intent.getStringExtra(COLOR_REQUESTED_01));
+        int color = Color.parseColor(intent.getStringExtra(COLOR_REQUESTED));
         findViewById(R.id.main_layout).setBackgroundColor(color);
     }
 }
